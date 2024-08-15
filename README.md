@@ -1,6 +1,11 @@
 # Trece software - NEXT.JS - NODE.JS (TYPESCRIPT)
 
-**Demo:** [https://ammper-app.netlify.app/](https://ammper-app.netlify.app/)
+**Demo:** [https://trece-software.netlify.app/login](https://trece-software.netlify.app/login)
+
+## usuario para acceder
+
+fernandojose28032002@gmail.com
+12345678
 
 ## Resumen
 
