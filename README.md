@@ -1,12 +1,12 @@
-# ammper-app (belvo)
+# Trece software - NEXT.JS - NODE.JS (TYPESCRIPT)
 
 **Demo:** [https://ammper-app.netlify.app/](https://ammper-app.netlify.app/)
 
 ## Resumen
 
-Este repositorio contiene el código para el proyecto ammper-app, desarrollado para la evaluación técnica de Belvo. El proyecto utiliza Next.js, SWR para la obtención de datos, TypeScript para tipado estático y Tailwind CSS para estilización junto con ui.shadcn. Cypress se utiliza para pruebas de extremo a extremo.
+Este repositorio contiene el código para el proyecto trece-software, desarrollado para la evaluación técnica de Belvo. El proyecto utiliza Next.js, SWR para la obtención de datos, TypeScript para tipado estático y Tailwind CSS para estilización junto con ui.shadcn. Cypress se utiliza para pruebas de extremo a extremo.
 
-La aplicación está desplegada en Netlify y se puede acceder [aquí](https://ammper-app.netlify.app/).
+La aplicación está desplegada en Netlify y se puede acceder [aquí](https://trece-software.netlify.app/login).
 
 ## Empezando
 
@@ -31,9 +31,35 @@ Esto abrirá el Cypress Test Runner, permitiéndote seleccionar y ejecutar prueb
 
 Next.js fue elegido para este proyecto debido a su soporte integrado para renderizado del lado del servidor, generación de sitios estáticos y rutas de API. Ofrece un excelente rendimiento desde el principio y simplifica el proceso de desarrollo con características como la división automática de código y la sustitución de módulos en caliente.
 
-## ¿Por qué SWR?
+## ¿Por qué React Query?
 
-SWR (Stale-While-Revalidate) se utiliza para la obtención de datos en este proyecto debido a su simplicidad y eficiencia. SWR maneja automáticamente el almacenamiento en caché, la revalidación y el manejo de errores, proporcionando una experiencia de obtención de datos suave y optimizada para los usuarios.
+Usar React Query en un proyecto ofrece varios beneficios que lo convierten en una herramienta poderosa para la gestión de la obtención, almacenamiento en caché, sincronización y actualización de datos en aplicaciones React. Aquí te explico las razones clave para preferir React Query:
+
+1. **Manejo Completo del Estado Asíncrono**:
+   React Query proporciona un sistema robusto para manejar estados asíncronos como carga, éxito, error y reintento. Esto es especialmente útil para manejar solicitudes HTTP donde el estado de la petición debe reflejarse de manera clara en la interfaz de usuario.
+
+2. **Almacenamiento en Caché Avanzado**:
+   React Query almacena los datos en caché automáticamente y los mantiene sincronizados en toda la aplicación, lo que reduce la cantidad de solicitudes redundantes y mejora el rendimiento. Además, ofrece un control detallado sobre la invalidación y revalidación de caché.
+
+3. **Sincronización de Datos en Tiempo Real**:
+   React Query permite sincronizar datos entre múltiples componentes en tiempo real sin esfuerzo adicional. Si un dato cambia en un lugar, se refleja automáticamente en todos los componentes que lo consumen.
+
+4. **Mutaciones y Sincronización Automática**:
+   React Query facilita la gestión de mutaciones (como POST, PUT, DELETE) y actualiza automáticamente el estado de la caché después de una mutación exitosa. Esto asegura que la UI siempre esté sincronizada con el backend sin necesidad de código adicional.
+
+5. **Control y Personalización**:
+   React Query ofrece más control y personalización en comparación con otras bibliotecas como SWR. Puedes configurar estrategias de reintento, políticas de revalidación, y mucho más, según las necesidades específicas de tu aplicación.
+
+6. **Soporte para Paginación y Prefetching**:
+   React Query tiene soporte nativo para paginación, infinite scrolling, y prefetching de datos, lo que permite cargar datos de manera anticipada para mejorar la experiencia del usuario.
+
+7. **Integración con DevTools**:
+   React Query Devtools ofrece una poderosa herramienta para visualizar y depurar el estado de las peticiones, mutaciones y caché, facilitando el desarrollo y la optimización.
+
+8. **Ecosistema y Comunidad**:
+   React Query cuenta con una comunidad activa y una documentación extensa, lo que facilita el aprendizaje y la resolución de problemas. Además, su ecosistema está en constante crecimiento, con nuevas características y mejoras continuas.
+
+En resumen, React Query es una opción excelente cuando se necesita una solución completa y flexible para manejar la obtención y sincronización de datos en aplicaciones React, especialmente en proyectos de gran escala o con requerimientos complejos.
 
 ## ¿Por qué Tailwind CSS y UI.SHADCN?
 
