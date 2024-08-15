@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
@@ -15,8 +16,9 @@ interface ChangePasswordFormInputs {
   password: string;
 }
 
-const Page = () => {
+const ChangePasswordPage: React.FC = () => {  // Asegúrate de que el tipo sea React.FC o React.FunctionComponent
   const mutation = useChangePassword();
+  const searchParams = useSearchParams();
   const router = useRouter();
 
   const {
@@ -25,11 +27,12 @@ const Page = () => {
     formState: { errors },
   } = useForm<ChangePasswordFormInputs>();
 
-  const searchParams = useSearchParams();
-
   const token = searchParams.get("token");
 
-  if (!token) return router.push("/login");
+  if (!token) {
+    router.push("/login");
+    return null;  // Siempre retorna null en lugar de void si no se debe renderizar nada
+  }
 
   const onSubmit: SubmitHandler<ChangePasswordFormInputs> = async (data) => {
     await mutation.mutate({
@@ -97,4 +100,10 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ChangePasswordPage />
+    </Suspense>
+  );
+}

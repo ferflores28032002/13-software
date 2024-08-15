@@ -106,7 +106,7 @@ export const UserFormFields: React.FC<UserFormFieldsProps> = ({
         {isError && <p>Error al cargar los roles.</p>}
         {!isLoading && !isError && (
           <Select
-            onValueChange={(value) => setValue("roleId", Number(value))}
+            onValueChange={(value:any) => setValue("roleId", Number(value))}
             defaultValue={initialValues?.roleId?.toString()}
           >
             <SelectTrigger>Seleccionar Rol</SelectTrigger>
